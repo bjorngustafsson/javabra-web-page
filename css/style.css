@@ -1,0 +1,38 @@
+body, html{
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+a:focus, a:hover {
+    text-decoration: underline;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ----------- header ----------------- */
+header {
+
+    /*Align header center center */
+    display: -webkit-flex;
+    display:         flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+/* ----------- Layout ----------------- */
+
+
+
+
+/* ----------- Footer and social ----------------- */
+
+
+
+/* ----------- Media Queries ----------------- */
