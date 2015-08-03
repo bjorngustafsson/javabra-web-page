@@ -7,12 +7,22 @@ body, html{
     font-family: "Open Sans", arial;
 }
 
-a:focus, a:hover {
-    text-decoration: underline;
-}
+
 
 a {
     text-decoration: none;
+}
+
+a:visited,
+a:hover,
+a:active {
+    color: inherit;
+    text-decoration: none;
+}
+
+.wrapping-container {
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 /* ----------- header ----------------- */
@@ -65,20 +75,19 @@ section {
     width: 30%;
     max-width: 450px;
     flex-basis: auto;
-    padding: 4%;
     font-size: 1rem;
 }
 
 .left-item{
-    /*padding-right: 2rem;*/
+    padding-right: 50px;
 }
 
 .right-item{
-   /* padding-left: 2rem;*/
+    padding-left: 50px;
 }
 
 .offers {
-    background-color: antiquewhite;
+    background-color: #F2F3EE;
     border: 3px solid #ffffff;
     box-sizing: border-box;
     float: left;
@@ -107,21 +116,39 @@ section {
 #portfolio{
     background-color: #fff;
     text-align: center;
+    border-bottom: 1px rgb(237, 237, 237) solid;
 }
 
 .references-header {
-    font-size: 3.5em;
+    font-size: 4em;
     font-family: "Quicksand", sans-serif;
+    font-weight: normal;
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 .reference-desc {
     padding: 2rem 0.5rem;
 }
 
+.references-preamble {
+    font-family: Quicksand, sans-serif;
+    font-size: 2em;
+    color: #FF9C0C;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    margin-top: 0.8rem;
+}
+
+.reference-text {
+    line-height: 1.5;
+    color: rgb(89, 89, 89);
+}
+
 .fader {
-    height: 70px;
+    height: 10px;
     position: relative;
-    top: -70px;
+    top: -10px;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&amp;0.01+0,1+100 */
     background: -moz-linear-gradient(top,  rgba(255,255,255,0.01) 0%, rgba(255,255,255,1) 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.01)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
@@ -137,44 +164,59 @@ section {
 
 .items-header {
     margin: 0;
-    font-family: Quicksand, sans-serif;
-    font-size: 3em;
+    text-transform: uppercase;
+    font-size: 2.4em;
+    font-family: "Quicksand", sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 6px;
 }
 
 .items-preamble {
-    color: #2BA368;
+    font-family: Quicksand, sans-serif;
+    color: #FF9C0C;
     font-size: 2em;
     margin: 1.1rem;
+    font-weight: 500;
+    letter-spacing: -0.5px;
 }
 
 /* ----------- About -------------------------- */
 section#about {
     margin: 1rem auto;
-    width: 76%;
-    max-width: 1000px;
     font-family: Quicksand, sans-serif;
 }
 
 .about-header {
     font-size: 4em;
     margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
 
 }
 
 .about-preamble {
     font-size: 2em;
-    margin-bottom: 1.5em;
-    color: #2BA368;
+    color: #FF9C0C;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    margin-top: 12px;
+    margin-bottom: 25px;
 }
 
 .about-text {
-    font-size: 1.2em;
+    font-size: 1em;
     -webkit-column-count: 2; /* Chrome, Safari, Opera */
     -moz-column-count: 2; /* Firefox */
     column-count: 2;
     -webkit-column-gap: 4rem; /* Chrome, Safari, Opera */
     -moz-column-gap: 4rem; /* Firefox */
     column-gap: 4rem;
+    border-bottom: 1px rgb(237, 237, 237) solid;
+    padding-bottom: 20px;
+    font-family: "Open Sans";
+    line-height: 1.8;
+    color: rgb(82, 82, 82);
 }
 
 
@@ -192,7 +234,8 @@ section#about {
     padding-bottom: 24.5%; /* = width for a 1:1 aspect ratio */
     margin:0.25%;
     overflow:hidden;
-    background-color: antiquewhite;
+    background-color: rgba(249, 246, 238, 0.93);
+    margin-bottom: 2rem;
 }
 
 .inner-content {
@@ -214,8 +257,47 @@ section#about {
     height:100%;
     width:100%;
 
-    font-size: 3.5em;
+    font-size: 2.5em;
     font-family: "Quicksand", sans-serif;
+}
+
+.come-in {
+    transform: scale(0.2,0.2);
+    -webkit-animation: come-in 1.2s ease forwards;
+    -moz-animation: come-in 1.2s ease forwards;
+    animation: come-in 1.2s ease forwards;
+}
+
+@keyframes come-in {
+    to {transform: scale(1,1);}
+}
+
+@-webkit-keyframes come-in {
+    to {transform: scale(1,1);}
+}
+
+.squares-header{
+    font-size: 4em;
+    font-family: "Quicksand", sans-serif;
+    font-weight: normal;
+    margin-bottom: 30px;
+    margin-top: 35px;
+    text-align: center;
+    /*text-transform: uppercase;*/
+}
+
+/* Hide original text */
+.table-cell:hover { font-size: 0;
+}
+
+/* Replace original text with value in data-hover */
+.table-cell:hover:before {
+    font-size: 18px;
+    content: attr(data-hover);
+}
+
+.square .fa {
+    color: rgb(223, 223, 223);
 }
 
 /* ----------- Media Queries ----------------- */
@@ -238,8 +320,8 @@ section#about {
     height: 100%;
     display: none;
     z-index: 99;
-    background-color: #fff4d5;
-    background-color: rgba(255, 244, 213, 0.90);
+    background-color: rgba(243, 242, 238, 0.82);
+    background-color: rgba(255, 244, 213, 0.73);
     box-sizing: border-box;
     padding: 65px 80px 80px 0;
 }
@@ -253,7 +335,7 @@ section#about {
     list-style-type: none;
 }
 .site-nav a {
-    color: #fff;
+    color: #353535;
     text-decoration: none;
     font-size: 3em;
     font-family: "Quicksand", sans-serif;
@@ -304,7 +386,7 @@ section#about {
     -webkit-transform: rotate(45deg) translate(5px, 6px);
     -ms-transform: rotate(45deg) translate(5px, 6px);
     transform: rotate(45deg) translate(5px, 6px);
-    background: #fff;
+    background: #353535;
 }
 
 #toggle.on .two {
@@ -314,5 +396,10 @@ section#about {
     -webkit-transform: rotate(-45deg) translate(7px, -10px);
     -ms-transform: rotate(-45deg) translate(7px, -10px);
     transform: rotate(-45deg) translate(7px, -10px);
-    background: #fff;
+    background: #353535;
 }
+
+#toggle.on {
+    position: fixed;
+}
+
