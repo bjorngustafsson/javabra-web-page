@@ -3,6 +3,22 @@ $(document).ready(function () {
     $('#toggle').on('click', function(){
         $(".site-nav").fadeToggle(200);  //Display or hide the matched elements by animating their opacity.
         $(this).toggleClass("on");  //controls the nav menu to an X
+
+        if ($('#toggle').hasClass('on')) {
+            $('.header').fadeOut();
+            $('.partners-list').fadeOut();
+        }
+        else {
+            $('.header').fadeIn();
+            $('.partners-list').fadeIn();
+        }
+
+    });
+
+    $(".arrow-container").click(function() {
+        $('html, body').animate({
+            scrollTop: $(".about-header").offset().top
+        }, 1000);
     });
 });
 
@@ -46,3 +62,7 @@ $(window).scroll(function(event) {
     });
 
 });
+
+
+
+
