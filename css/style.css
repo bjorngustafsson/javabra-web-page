@@ -150,7 +150,16 @@ section {
 
 .item-img {
     width: 100%;
-    max-width: 450px;
+    max-width: 375px;
+    -webkit-transition: -webkit-transform 0.3s ease;
+    -moz-transition: -moz-transform 0.3s ease;
+    transition: transform 0.3s ease;
+}
+.item-img:hover {
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 #portfolio{
@@ -296,6 +305,7 @@ section#about {
     overflow:hidden;
     background-color: rgba(249, 246, 238, 0.93);
     margin-bottom: 2rem;
+    border-radius: 10px;
 }
 
 .inner-content {
@@ -368,17 +378,6 @@ section#about {
 
 .square .fa {
     color: rgb(223, 223, 223);
-}
-
-.cd-main-content {
-    /* set a min-height and a z-index to be sure that the main element completely covers the lateral menu */
-    min-height: 100%;
-    z-index: 2;
-    transition-property: transform;
-    transition-duration: 0.4s;
-}
-.cd-main-content.lateral-menu-is-open {
-    transform: translateX(-260px);
 }
 
 /*--------------Nav ---------------------------*/
@@ -621,4 +620,3 @@ section#about {
         margin-bottom: 20px;
     }
 }
-

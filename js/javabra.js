@@ -54,7 +54,7 @@ $(document).ready(function () {
 
 $(window).scroll(function(event) {
 
-    $(".item-img").each(function(i, el) {
+    $(".square").each(function(i, el) {
         var el = $(el);
         if (el.visible(true)) {
             el.addClass("come-in");
